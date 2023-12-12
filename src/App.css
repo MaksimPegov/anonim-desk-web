@@ -17,11 +17,6 @@ hr {
   background-color: black;
 }
 
-h1,
-h2 {
-  color: #34021d;
-}
-
 h1 {
   margin-bottom: 5px;
 }
@@ -34,11 +29,9 @@ h2 {
   background: rgba(255, 255, 255, 0.3);
   width: 800px;
   padding: 40px;
-
-  max-height: 540px;
-
   display: flex;
   flex-direction: column;
+  max-height: 540px;
 }
 
 form {
@@ -59,4 +52,59 @@ form {
 
 .MessageBox {
   overflow: scroll;
+  overflow-wrap: break-word;
+}
+
+@media screen and (max-width: 900px) {
+  .Header {
+    width: 450px;
+  }
+
+  .MainBox {
+    width: 500px;
+    max-height: 500px;
+  }
+
+  .Input {
+    width: 300px;
+    margin-right: 15px !important;
+  }
+
+  .Button {
+    width: 160px !important;
+  }
+
+  .MessageBox {
+    width: 500px !important;
+    align-self: center;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .Header {
+    width: 380px;
+  }
+
+  h2 {
+    font-size: 22px;
+  }
+
+  .MainBox {
+    width: 300px;
+    max-height: 400px;
+  }
+
+  .Input {
+    width: 230px;
+    margin-right: 15px !important;
+  }
+
+  .Button {
+    width: 100px !important;
+  }
+
+  .MessageBox {
+    width: 350px !important;
+    align-self: center;
+  }
 }
