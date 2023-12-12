@@ -1,9 +1,8 @@
 import { useState } from 'react'
-import Button from '@mui/material/Button'
-
 import './App.css'
 import { Message } from './components/message/Message'
-import { TextField } from '@mui/material'
+import Button from '@mui/material/Button'
+import TextField from '@mui/material/TextField'
 
 function App() {
   const [messages, setMessages] = useState([])
@@ -36,10 +35,10 @@ function App() {
             onChange={handleInputChange}
             value={input}
             className="Input"
-            // inputProps={{ maxLength: 75 }}
+            inputProps={{ maxLength: 100 }}
           />
 
-          <Button onClick={addMessage} className="Button" variant="contained">
+          <Button variant="contained" onClick={addMessage} className="Button">
             Publish
           </Button>
         </form>
